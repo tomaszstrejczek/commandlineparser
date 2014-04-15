@@ -481,6 +481,8 @@ namespace CommandLine
                 {
                     // User explicitly requested help
                     var verb = args.FirstOrDefault();
+                    if (args.Length > 1)
+                        verb = args[1];
                     if (verb != null)
                     {
                         var verbOption = optionMap[verb];
